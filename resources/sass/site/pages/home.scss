@@ -1,0 +1,180 @@
+/* home - start */
+
+section.home {
+  display: block;
+
+  .content {
+    max-width: $content-max-width;
+    margin: 0 auto;
+    padding-top: 50px;
+
+    .home-search {
+      position: relative;
+      display: inline-block;
+
+      z-index: 10;
+
+      h4 {
+        display: inline-block;
+        white-space: nowrap;
+        font-size: 20px;
+      }
+
+      &.loading {
+        .input-wr {
+
+          .fa-circle-notch {
+            display: inherit;
+          }
+        }
+      }
+
+      .input-wr {
+        position: relative;
+        display: block;
+
+
+        @include hover-active() {
+          .fa {
+            @include opacity(1);
+          }
+        }
+
+        input {
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 42px;
+          line-height: 42px;
+          padding: 0 20px;
+
+
+          border: 1px solid $color-8;
+
+          z-index: 1;
+
+          @include border-radius(24px);
+        }
+
+        .fa-search {
+          position: absolute;
+          top: 10px;
+          right: 15px;
+
+          font-size: 20px;
+          color: $color-6;
+
+          z-index: 2;
+
+          @include opacity(.5);
+        }
+
+        .fa-circle-notch {
+          display: none;
+          position: absolute;
+          top: 10px;
+          right: 42px;
+
+          font-size: 20px;
+          color: $color-6;
+
+          z-index: 2;
+
+
+          @include opacity(.5);
+        }
+
+        .search-result-wr {
+          position: absolute;
+          top: 20px;
+          left: 17px;
+          right: 17px;
+
+          padding: 10px;
+
+          background: white;
+          border: 1px solid #a4a4a4;
+          z-index: 0;
+
+          @include anima-time(.2s);
+
+          &.has-result {
+            top: 41px;
+
+          }
+
+          h5 {
+            display: block;
+            white-space: nowrap;
+            font-size: 16px;
+
+          }
+
+          .dia {
+            display: block;
+
+            text-align: right;
+
+            font-size: 12px;
+
+          }
+
+
+        }
+      }
+    }
+
+  }
+
+}
+
+section.bar {
+  display: block;
+
+  background: $color-3;
+
+  overflow: hidden;
+
+
+  .content {
+    max-width: $content-max-width;
+    margin: 0 auto;
+
+    h3 {
+      display: block;
+      height: 70px;
+      margin: 0;
+      line-height: 70px;
+      font-size: 20px;
+
+    }
+  }
+}
+
+/* ------[ home - media queries ]------ */
+@include respond-to(w768) {
+
+  section.home {
+
+    .content {
+
+      .home-search {
+
+        h4 {
+          display: block;
+          white-space: normal;
+          font-size: 18px;
+
+          text-align: center;
+        }
+
+      }
+
+    }
+  }
+}
+
+@include respond-to(w480) {
+
+
+}

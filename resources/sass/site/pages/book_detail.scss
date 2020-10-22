@@ -1,0 +1,70 @@
+/* book detail - start */
+body.page-book-detail {
+
+  section {
+    background-color: #fafafa;
+  }
+}
+
+section.book-detail-top {
+  display: block;
+
+  background: url("../../../../public/img/bg-12.jpg") top center;
+
+  .content {
+    max-width: $content-max-width;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    .c-wr {
+      position: relative;
+      min-height: 260px;
+
+      .im-wr {
+        float: left;
+        width: 200px;
+        height: 200px;
+
+        margin: 0 30px 30px 0;
+
+        overflow: hidden;
+
+        @include border-radius(12px);
+
+      }
+
+      .name {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 23px;
+        font-weight: 700;
+        color: #444444;
+      }
+      .tab-menu {
+        display: flex;
+
+        li {
+          margin: 5px;
+
+          .bt {
+            min-width: 175px;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.book-detail-mid {
+
+  .content {
+    max-width: $content-max-width;
+    margin: 0 auto;
+
+    .content-wr {
+      display: flex;
+      margin: 0 -20px;
+
+    }
+  }
+}

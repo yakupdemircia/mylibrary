@@ -1,0 +1,13 @@
+/.idea/
+/node_modules/
+/vendor/
+/admin/
+/api/
+/panel/
+/error/
+/stats/
+.env
+
+/public/uploads/
+.DS_Store
+composer.lock

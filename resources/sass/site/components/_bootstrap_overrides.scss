@@ -1,0 +1,209 @@
+
+.ck-content {
+  p {
+    display: block;
+    margin: 0 !important;
+  }
+  ul {
+    padding-left: 20px;
+    li {
+      list-style: circle;
+    }
+  }
+}
+
+.ck-editor__editable_inline {
+  min-height: 200px;
+}
+
+.dropzone {
+  min-height: 50px;
+  border: none;
+  background: #ffffff;
+  padding: 10px;
+
+  border-top: 1px solid #c4c4c4;
+
+}
+
+.image-uploader {
+  position: relative;
+  min-height: 150px;
+  border: 1px solid #c4c4c4;
+
+  .preview {
+
+    .s, .m {
+      display: none;
+    }
+
+    &.single {
+      .s {
+        position: relative;
+        display: block;
+
+        img {
+          display: block;
+          max-width: 320px;
+          max-height: 320px;
+        }
+
+        .remove-image {
+
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          padding: 10px;
+
+          font-size: 20px;
+          color: white;
+
+          background: rgba(0, 0, 0, .5);
+
+          cursor: pointer;
+
+        }
+
+      }
+    }
+
+    &.multiple {
+
+      padding: 0;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 5px;
+
+        li {
+          position: relative;
+          width: 180px;
+          height: 180px;
+          margin: 5px;
+
+          border: 1px solid #cccccc;
+
+          overflow: hidden;
+
+          img {
+            display: block;
+            max-width: 320px;
+            max-height: 320px;
+          }
+
+          .remove-image {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+
+            font-size: 20px;
+            color: white;
+
+            background: rgba(0, 0, 0, .5);
+            cursor: pointer;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.dzupload-cr-wr {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99998;
+  background: black;
+
+  button.cc {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 10;
+  }
+
+  button.cf {
+    position: absolute;
+    top: 75px;
+    left: 25px;
+    z-index: 10;
+  }
+}
+
+.profile-photo-uploader-wr {
+
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+
+  @include anima-time(.5s);
+
+  &.opened {
+    max-height: 500px;
+  }
+
+  .image-uploader {
+
+    .preview {
+
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      .remove-image {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: $color-2;
+  background-color: $color-7;
+  border-color: transparent;
+}
+
+.toggle.btn {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+}
+
+
+.toggle.ios, .toggle-on.ios, .toggle-off.ios {
+  border-radius: 20px;
+}
+
+.toggle.ios .toggle-handle {
+  border-radius: 20px;
+  background: white;
+}
+
+.text-right {
+  text-align: right;
+}
+
+div.datedropper.datedropper {
+
+  --dd-color1: #2BB3B0;
+  --dd-color2: #FFF;
+  --dd-color3: #4A4A48;
+  --dd-color4: #FFF;
+
+  --dd-radius: 4px;
+  --dd-width: 172px;
+  --dd-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.1);
+
+}

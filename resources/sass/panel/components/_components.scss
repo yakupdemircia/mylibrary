@@ -1,0 +1,441 @@
+/* components - start */
+
+// Inputs
+
+.inp {
+
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: 40px;
+    line-height: 100%;
+    padding: 0 2px;
+
+    margin: 5px auto 15px auto;
+
+    font-size: 14px;
+    color: $color-1;
+    font-weight: 300;
+
+    border: none;
+    border-bottom: 1px solid $color-4;
+    background: $color-2;
+
+    @include placeholder-color($color-4);
+
+}
+
+.inpt {
+
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: 40px;
+    line-height: 100%;
+    padding: 0 10px;
+
+    margin: 5px auto 15px auto;
+
+    font-size: 14px;
+    color: $color-1;
+    font-weight: 300;
+
+    border: 1px solid $color-4;
+    background: $color-2;
+
+    @include placeholder-color($color-4);
+
+    &.inpt-lg {
+
+        height: 50px;
+        line-height: 100%;
+
+    }
+
+    &.inpt-block {
+
+        width: 100%;
+        max-width: 100%;
+
+    }
+}
+
+.texta {
+
+    position: relative;
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    height: 120px;
+    padding: 5px;
+
+    margin: 5px auto 15px auto;
+
+    font-size: 14px;
+    color: $color-1;
+    font-weight: 300;
+
+    border: 1px solid $color-4;
+    background: $color-2;
+
+    @include placeholder-color($color-4);
+
+    &.texta-190 {
+        height: 190px;
+    }
+
+    &.texta-115 {
+        height: 115px;
+    }
+
+}
+
+.input-wr {
+
+    position: relative;
+
+    .inp {
+        padding-right: 30px;
+
+    }
+
+    i.show-password {
+        position: absolute;
+        top: 12px;
+        right: 8px;
+
+        font-size: 16px;
+
+        cursor: pointer;
+
+        @include opacity(.8);
+    }
+
+}
+
+// Buttons
+
+.bt {
+    display: inline-block;
+    max-width: 100%;
+    height: 40px;
+    line-height: 41px;
+    padding: 0 10px;
+
+    min-width: 100px;
+
+    color: #FFF;
+
+    border: none;
+
+    @include border-radius(9px);
+
+    background: $color-4;
+    text-align: center;
+    cursor: pointer;
+
+    .bt-inline-wr {
+        display: inline-block;
+        height: 24px;
+        margin: 12px auto;
+
+        .ic {
+            float: left;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: 0 0 no-repeat;
+            @include background-size(24px, 24px);
+        }
+
+        .tx {
+            float: left;
+            height: 24px;
+            line-height: 28px;
+            margin-left: 10px;
+
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        &:after {
+            @include clearfix();
+        }
+    }
+
+    &.bt-xs {
+        height: 24px;
+        line-height: 28px;
+        @include border-radius(12px);
+    }
+
+    &.bt-md {
+        display: inline-block;
+        height: 36px;
+        line-height: 40px;
+
+        padding: 0 15px;
+
+        @include border-radius(18px);
+
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    &.bt-red {
+
+        @include bg-gradient-lr($color-6, $color-7);
+
+        @include hover-active {
+
+            color: $color-4;
+            @include bg-gradient-tb($color-7, $color-6);
+
+        }
+    }
+
+    &.bt-black {
+        background: $color-2;
+
+        @include hover-active {
+            @include opacity(.8);
+        }
+    }
+
+    &.bt-blue {
+        @include bg-gradient-lr($color-8, $color-9);
+
+        @include hover-active {
+            color: $color-4;
+            @include bg-gradient-tb($color-9, $color-8);
+
+        }
+    }
+
+    &.bt-round-xs {
+        @include border-radius(4px);
+
+    }
+
+}
+
+//
+.event-daily-program-matic {
+    padding: 10px;
+    border: 1px solid #efefef;
+
+    @include border-radius(4px);
+
+
+    .edpm-head {
+        position: relative;
+        display: block;
+        height: 42px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #efefef;
+
+        label {
+            line-height: 32px;
+        }
+
+        .edpm-add-day {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            display: inline-block;
+            padding: 5px;
+
+            border: 1px solid #efefef;
+            cursor: pointer;
+
+            @include border-radius(4px);
+
+            @include hover-active {
+
+                background: #20a8d8;
+                color: #ffffff;
+            }
+
+        }
+    }
+
+    .edpm-list {
+
+        max-height: 300px;
+
+        padding-right: 10px;
+
+        overflow-y: scroll;
+
+        ul {
+            display: block;
+
+            li {
+                display: block;
+
+                .edpm-list-item-head {
+                    position: relative;
+
+                    padding-right: 100px;
+
+                    height: 40px;
+
+                    .edpm-add-item {
+                        position: absolute;
+                        top: 0;
+                        right: 34px;
+
+                        display: inline-block;
+                        padding: 2px 5px;
+
+                        color:green;
+
+                        border: 1px solid #efefef;
+                        cursor: pointer;
+
+                        @include border-radius(4px);
+
+                        @include hover-active {
+
+                            background: #20a8d8;
+                            color: #ffffff;
+                        }
+                    }
+                    .edpm-remove-day {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+
+                        display: inline-block;
+                        padding: 2px 5px;
+
+                        color: red;
+
+                        border: 1px solid #efefef;
+                        cursor: pointer;
+
+                        @include border-radius(4px);
+
+                        @include hover-active {
+
+                            background: #20a8d8;
+                            color: #ffffff;
+                        }
+                    }
+
+                    input {
+                        display: block;
+                        width: 100%;
+                        border: none;
+
+                        height: 30px;
+                        line-height: 100%;
+                        padding: 0 2px;
+                        margin: 0;
+
+                        font-size: 16px;
+                        color: $color-1;
+                        font-weight: 700;
+
+                        background: #ffffff;
+
+                        @include placeholder-color($color-4);
+
+                    }
+                }
+
+                dl {
+                    display: block;
+
+                    dt {
+                        position: relative;
+                        margin-bottom: 10px;
+
+                        border-bottom: 1px dashed #efefef;
+
+
+                        .ia, .ib {
+                            float: left;
+                            display: block;
+                            width: 50px;
+                            border: none;
+                            border-bottom: 1px solid #efefef;
+
+                            height: 30px;
+                            line-height: 100%;
+                            padding: 0 2px;
+                            margin: 0;
+
+                            font-size: 14px;
+                            color: $color-1;
+                            font-weight: 300;
+
+                            background: #ffffff;
+
+                            @include placeholder-color($color-4);
+
+                        }
+
+                        .ia {
+                            margin-right: 10px;
+                            margin-bottom: 10px;
+                        }
+
+                        .ib {
+                        }
+
+                        .ic {
+                            display: block;
+                            width: 100%;
+                            border: none;
+
+                            height: 30px;
+                            line-height: 100%;
+                            padding: 0 2px;
+                            margin: 0;
+
+                            font-size: 14px;
+                            color: $color-1;
+                            font-weight: 300;
+
+                            background: #ffffff;
+
+                            @include placeholder-color($color-4);
+
+                        }
+
+                        .edpm-remove-item {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+
+                            display: inline-block;
+                            padding: 2px 5px;
+
+                            color: red;
+
+                            border: 1px solid #efefef;
+                            cursor: pointer;
+
+                            @include border-radius(4px);
+
+                            @include hover-active {
+
+                                background: #20a8d8;
+                                color: #ffffff;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

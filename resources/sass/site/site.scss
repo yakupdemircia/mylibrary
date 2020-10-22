@@ -1,0 +1,33 @@
+// import third parties
+@import url(../../bower/bootstrap/dist/css/bootstrap.min.css);
+@import url(../../bower/bootstrap-toggle/css/bootstrap-toggle.min.css);
+//@import url(../../bower/fontawesome/css/all.min.css);
+
+@import url(../../bower/bootstrap-sweetalert/dist/sweetalert.css);
+@import url(../../bower/intl-tel-input/build/css/intlTelInput.min.css);
+@import url(../../bower/validationengine/css/validationEngine.jquery.css);
+//@import url(../../bower/datetimepicker/jquery.datetimepicker.css);
+@import url(../../bower/select2/dist/css/select2.min.css);
+@import url(../../bower/dropzone/dist/min/dropzone.min.css);
+@import url(../../bower/cropperjs/dist/cropper.min.css);
+@import url(../../bower/jquery-ui/themes/smoothness/jquery-ui.min.css);
+@import url(../../bower/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.css);
+
+
+// fonts, variables, components etc.
+@import "components/fonts";
+@import "components/variables";
+@import "components/keyframes";
+@import "components/mixins";
+@import "components/components";
+
+// body parts
+@import "components/body";
+@import "components/header";
+@import "components/footer";
+@import "components/bootstrap_overrides";
+
+// pages
+@import "pages/home";
+@import "pages/book_detail";
+@import "pages/404";

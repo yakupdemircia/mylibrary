@@ -1,0 +1,42 @@
+{
+  "name": "validationengine",
+  "description": "Validate your forms with style. Complete api included for advanced users",
+  "main": [
+    "js/jquery.validationEngine.js",
+    "css/validationEngine.jquery.css"
+  ],
+  "dependencies": {
+    "jquery": ">=1.6"
+  },
+  "keywords": [
+    "form",
+    "field",
+    "validation"
+  ],
+  "authors": [
+    {
+      "name": "Cedric Dugas",
+      "homepage": "http://www.position-absolute.com"
+    },
+    {
+      "name": "Olivier Refalo",
+      "homepage": "http://www.crionics.com"
+    }
+  ],
+  "license": "MIT",
+  "ignore": [
+    "test/",
+    "tests/"
+  ],
+  "homepage": "https://github.com/posabsolute/jQuery-Validation-Engine",
+  "version": "3.1.0",
+  "_release": "3.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.1.0",
+    "commit": "1c3ce51b52420c6a9b0f36267ce4a02e3126faf0"
+  },
+  "_source": "https://github.com/posabsolute/jQuery-Validation-Engine.git",
+  "_target": "^3.0.0",
+  "_originalSource": "jQuery-Validation-Engine"
+}

@@ -1,0 +1,481 @@
+/* home - start */
+
+#log {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 3px;
+
+  font-size: 10px;
+  color: white;
+
+  z-index: 9999;
+}
+
+section {
+
+  display: block;
+  width: 100%;
+
+  &.loading {
+
+    h3.head {
+      .fa-spin {
+        display: inline-block;
+      }
+    }
+  }
+
+  .head-wr {
+    height: 30px;
+    margin-bottom: 10px;
+
+  }
+
+  h3.head {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    border-bottom: 1px solid $color-6;
+    background: rgba(255, 255, 255, .9);
+
+    .hs {
+      float: right;
+
+      display: inline-block;
+      padding-right: 10px;
+
+      font-size: 12px;
+      color: $color-3;
+
+      .cn {
+
+      }
+
+      .reset {
+        margin-left: 5px;
+
+        cursor: pointer;
+      }
+
+    }
+
+    &.sticky {
+      position: fixed;
+      top: 60px;
+      left: 10px;
+      right: 10px;
+
+      z-index: 999;
+
+    }
+
+    &.stickyB {
+      position: fixed;
+      bottom: 0;
+      left: 10px;
+      right: 10px;
+
+      z-index: 999;
+
+    }
+
+    .fa-spin {
+      display: none;
+    }
+
+  }
+
+  h4.head {
+    display: block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-3;
+
+
+  }
+}
+
+
+.table {
+  display: table;
+
+  .table-row {
+    display: table-row;
+
+    .table-cell {
+      display: table-cell;
+    }
+  }
+}
+
+/* ------ [ section-brand ] ------ */
+.section-brand {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto 25px auto;
+  padding: 10px;
+
+
+  h3.head.sticky {
+    top: 60px;
+  }
+
+  ul.list {
+
+    display: block;
+    text-align: center;
+
+    li {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      height: 200px;
+      margin: 10px;
+
+      text-align: left;
+      border: 2px solid $color-4;
+
+
+      background: $color-5;
+      overflow: hidden;
+
+      @include border-radius(12px);
+
+      &.selected {
+
+        .cb {
+          span {
+            background: $color-6;
+          }
+        }
+
+      }
+
+      .image {
+        display: block;
+        max-width: 100%;
+      }
+
+      .cb {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+
+        display: block;
+        width: 32px;
+        height: 32px;
+
+        margin-top: -16px;
+
+        border: 2px solid $color-4;
+
+        @include border-radius(50%);
+
+        span {
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          display: block;
+          width: 24px;
+          height: 24px;
+          padding-top: 4px;
+
+          text-align: center;
+
+          @include border-radius(50%);
+
+          .fas {
+            font-size: 16px;
+            color: $color-5;
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+}
+
+/* ------ [ section-brand-series ] ------ */
+.section-brand-series {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto 25px auto;
+  padding: 10px;
+
+  overflow-x: hidden;
+
+
+  h3.head.sticky {
+    top: 90px;
+  }
+
+  h3.head {
+
+    &.sticky {
+      top: 90px;
+    }
+
+    &.stickyB {
+      bottom: 30px;
+    }
+  }
+
+}
+
+/* ------ [ section-brand-series-model ] ------ */
+.section-brand-series-model {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto 25px auto;
+  padding: 10px;
+
+  overflow-x: hidden;
+
+  h3.head {
+
+    &.sticky {
+      top: 120px;
+    }
+
+    &.stickyB {
+      bottom: 0;
+    }
+  }
+
+  .list {
+
+    display: block;
+    width: 105%;
+    margin-bottom: 10px;
+
+    @include clearfix;
+
+    li {
+      position: relative;
+      float: left;
+      width: 242px;
+      height: 250px;
+      margin: 0 10px 10px 0;
+
+      text-align: left;
+      border: 1px solid $color-4;
+
+      background: $color-5;
+      overflow: hidden;
+
+      @include border-radius(12px);
+
+      .image-box {
+        display: block;
+        width: 100%;
+        height: 90px;
+
+        padding: 10px;
+
+        background: $color-4;
+
+        img {
+          display: block;
+          max-height: 72px;
+
+          margin: 0 auto;
+        }
+
+      }
+
+      .details-box {
+        padding: 0 10px;
+
+        .line {
+          padding: 5px 0;
+
+          text-align: left;
+
+          &.title {
+            font-size: 18px;
+            font-weight: 700;
+            color: $color-2;
+          }
+
+          &.desc {
+            font-size: 14px;
+            font-weight: 400;
+            color: $color-3;
+          }
+
+          &.price {
+            .p {
+
+              font-size: 15px;
+              font-weight: 700;
+              color: $color-2;
+            }
+
+            .t {
+
+              font-size: 14px;
+              font-weight: 400;
+              color: $color-2;
+            }
+          }
+
+          &.specs {
+
+            .spec {
+              display: inline-block;
+              margin-right: 10px;
+
+              a {
+                position: relative;
+                display: inline-block;
+              }
+
+              .fas {
+                font-size: 14px;
+                color: $color-3;
+              }
+
+              span {
+
+                font-size: 14px;
+                font-weight: 400;
+                color: $color-3;
+              }
+
+            }
+          }
+
+          & + .line {
+            border-top: 1px solid $color-4;
+          }
+
+        }
+      }
+
+      .button-box {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        .bt {
+          position: relative;
+          display: block;
+          width: 100%;
+
+          padding-left: 42px;
+
+          font-size: 16px;
+
+          @include border-radius(0);
+
+
+          i {
+            position: absolute;
+            top: 4px;
+            left: 0;
+
+            display: block;
+            width: 36px;
+            height: 32px;
+
+            padding-top: 8px;
+
+            font-size: 20px;
+
+            border-right: 1px dashed $color-4;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+/* ------[ home - media queries ]------ */
+@include respond-to(w768) {
+
+  .section-brand {
+    ul.list {
+      width: 100%;
+
+      li {
+        width: 220px;
+        height: 150px;
+
+        .cb {
+          right: 10px;
+        }
+      }
+    }
+  }
+
+}
+
+@include respond-to(w480) {
+  .section-brand {
+    ul.list {
+
+      li {
+        display: block;
+        width: 100%;
+        height: 190px;
+        margin: 10px 0;
+
+        .image {
+          max-width: 280px;
+        }
+
+        .cb {
+          right: 30px;
+        }
+
+      }
+    }
+  }
+
+  .section-brand-series-model {
+    .list {
+      width: 100%;
+      li {
+        position: relative;
+        float: none;
+        width: 100%;
+        height: auto;
+
+        padding-bottom: 50px;
+
+        .image-box {
+          display: block;
+          width: 100%;
+          height: auto;
+          min-height: 90px;
+
+          img {
+            display: block;
+            max-height: 100%;
+            max-width: 70%;
+            margin: 0 auto;
+          }
+
+        }
+
+
+      }
+    }
+  }
+
+}
+
+/* home - end */

@@ -1,0 +1,14 @@
+{
+  "name": "ckeditor5-build-classic",
+  "homepage": "https://github.com/ckeditor/ckeditor5-build-classic",
+  "version": "12.4.0",
+  "_release": "12.4.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v12.4.0",
+    "commit": "2549eca274e92a65e89b5b41af71853300c476c3"
+  },
+  "_source": "https://github.com/ckeditor/ckeditor5-build-classic.git",
+  "_target": "^12.2.0",
+  "_originalSource": "ckeditor/ckeditor5-build-classic"
+}

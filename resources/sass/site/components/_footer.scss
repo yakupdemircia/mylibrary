@@ -1,0 +1,158 @@
+/* ------[ footer ]------ */
+footer {
+
+  display: block;
+  margin-top: 70px;
+
+  background: $color-3;
+
+  .footer {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    max-width: $content-max-width;
+    margin: 0 auto;
+    padding: 15px;
+
+
+    .left {
+      position: relative;
+
+      flex: 1 70%;
+
+      padding-top: 80px;
+
+      .logo {
+        position: absolute;
+        top: 15px;
+        left: 0;
+
+        font-size: 24px;
+        font-weight: 700;
+
+        span {
+          font-size: 12px;
+          font-weight: 300;
+          color: gray;
+        }
+      }
+
+      h5 {
+        display: block;
+        margin-bottom: 10px;
+
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      p {
+        display: block;
+        max-width: 80%;
+        margin-bottom: 5px;
+
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+      .social {
+        a {
+          display: inline-block;
+          margin-right: 10px;
+
+          i {
+            font-size: 24px;
+
+          }
+        }
+
+      }
+
+    }
+
+    .right {
+      position: relative;
+
+      flex: 1 30%;
+
+      padding-top: 80px;
+
+
+      .menu {
+
+        li {
+          display: block;
+
+          margin-bottom: 15px;
+
+          a {
+            font-size: 15px;
+            font-weight: 500;
+          }
+
+        }
+
+      }
+
+
+    }
+
+  }
+
+}
+
+/* ------[ footer - media queries ]------ */
+@include respond-to(w1024) {
+
+}
+
+@include respond-to(w768) {
+
+  footer {
+
+    .footer {
+      .social {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        a {
+
+          i {
+            font-size: 20px;
+
+          }
+        }
+
+      }
+
+      .menu {
+
+        display: block;
+        max-width: 80%;
+
+        padding-left: 10px;
+
+        li {
+
+          margin: 5px;
+
+          a {
+            font-size: 15px;
+          }
+
+        }
+
+      }
+
+
+    }
+
+
+  }
+}
+
+@include respond-to(w480) {
+
+
+}

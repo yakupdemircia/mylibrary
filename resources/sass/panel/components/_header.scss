@@ -1,0 +1,138 @@
+/* ------[ header ]------ */
+
+$bar-width: 30px;
+$bar-height: 2px;
+$bar-spacing: 10px;
+
+header {
+    position: relative;
+    display: block;
+    background: black;
+    z-index: 1000;
+
+    .header {
+        position: relative;
+        display: block;
+        height: 60px;
+
+        .logo {
+            position: absolute;
+            top: 5px;
+            left: 10px;
+
+            display: block;
+            width: 200px;
+            height: 60px;
+
+            font-size: 28px;
+            color: $color-5;
+
+        }
+
+        .menu-wrapper {
+            display: none;
+            position: absolute;
+            top: 15px;
+
+            right: 15px;
+            width: $bar-width;
+            height: $bar-height + $bar-spacing*2;
+            cursor: pointer;
+
+            .hamburger-menu {
+
+                position: relative;
+                width: $bar-width;
+                height: $bar-height;
+
+                background: white;
+
+                @include anima-time(.3s);
+                @include transform(translateY($bar-spacing));
+
+
+                &.animate {
+                    background: rgba(255, 255, 255, 0);
+                }
+
+                &:before {
+                    width: $bar-width;
+                    height: $bar-height;
+
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: $bar-spacing;
+                    background: rgba(255, 255, 255, 1);
+                    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                }
+
+                &:after {
+                    width: $bar-width;
+                    height: $bar-height;
+
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: $bar-spacing;
+                    background: rgba(255, 255, 255, 1);
+                    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                }
+
+                &.animate:before {
+
+                    bottom: 0;
+                    transform: rotate(-45deg);
+                    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+
+
+                }
+
+                &.animate:after {
+
+                    top: 0;
+                    transform: rotate(45deg);
+                    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+
+
+                }
+
+
+            }
+
+        }
+
+    }
+}
+
+/* ------[ header - media queries ]------ */
+@include respond-to(w1024) {
+
+}
+
+@include respond-to(w768) {
+
+    header {
+
+        .header {
+
+            .logo {
+
+                display: block;
+                width: 120px;
+                background-size: 112px auto;
+
+            }
+
+            .menu-wrapper {
+                display: block;
+            }
+        }
+    }
+
+}
+
+@include respond-to(w480) {
+
+
+}

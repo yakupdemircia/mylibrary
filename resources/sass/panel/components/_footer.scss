@@ -1,0 +1,25 @@
+/* ------[ footer ]------ */
+footer {
+
+  display: block;
+  min-height: 60px;
+
+  background: rgba(0, 0, 0, .8);
+
+
+}
+
+/* ------[ footer - media queries ]------ */
+@include respond-to(w1024) {
+
+}
+
+@include respond-to(w768) {
+
+
+}
+
+@include respond-to(w480) {
+
+
+}

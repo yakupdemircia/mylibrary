@@ -1,0 +1,408 @@
+/* start - begin */
+
+.start-c {
+  display: block;
+  max-width: 1024px;
+
+  .top {
+    position: relative;
+    display: block;
+    height: 80px;
+    padding: 10px 30px 10px 10px;
+    border-bottom: 1px solid $color-3;
+
+    background: $color-4;
+
+    @include clearfix();
+
+    .l {
+      float: left;
+      width: 25%;
+
+      padding-right: 10px;
+
+      .im {
+        display: block;
+        height: 60px;
+
+        img {
+          display: block;
+          max-height: 100%;
+        }
+      }
+
+    }
+
+    .r {
+      float: left;
+      width: 75%;
+
+      .title {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 20px;
+
+      }
+
+      .price {
+        font-size: 14px;
+      }
+
+    }
+
+    .basket {
+      position: absolute;
+      top: 28px;
+      right: 15px;
+
+      color: $color-3;
+
+      .fa-shopping-basket {
+        font-size: 22px;
+      }
+
+      .fa-chevron-down {
+        font-size: 16px;
+      }
+
+      &.opened {
+
+        .sub {
+          display: block;
+          max-height: 1024px;
+        }
+
+      }
+
+      .sub {
+        display: none;
+        max-height: 0;
+        position: absolute;
+        top: 51px;
+        right: -15px;
+
+        width: 375px;
+
+        padding: 10px 30px;
+        border: 1px solid $color-3;
+        background: $color-5;
+
+        color: $color-2;
+
+
+        z-index: 100;
+
+        @include anima-time(.3s);
+
+
+        .liner {
+          display: block;
+
+          & + .liner {
+            margin-top: 10px;
+          }
+
+          font-size: 16px;
+
+          img {
+            max-width: 300px;
+            margin: 15px 0;
+          }
+
+          .head {
+            display: block;
+            padding: 5px 0;
+
+            font-size: 18px;
+            font-weight: 700;
+          }
+
+          .sinfo {
+            display: block;
+            padding: 5px 0;
+
+            font-size: 12px;
+            color: $color-3;
+          }
+
+          .t-1 {
+            width: 100%;
+
+            tbody {
+              td {
+                padding: 3px 0;
+
+                &:nth-child(2) {
+                  text-align: right;
+                }
+              }
+            }
+
+            tfoot {
+
+              td {
+
+                padding: 3px 0;
+                border-top: 1px solid $color-4;
+
+                font-weight: 700;
+
+                &:nth-child(2) {
+                  text-align: right;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.start-c-options-wr {
+  min-height: 830px;
+  padding: 10px;
+
+
+  .ui-accordion .ui-accordion-header .fas {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+  .ui-accordion .ui-accordion-content {
+    padding: 10px;
+  }
+
+  .package-list {
+
+    width: 100%;
+
+    color: $color-2;
+
+    .package-list-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      & + .package-list-item {
+
+        border-top: 1px solid $color-3;
+
+
+      }
+
+      &.selected {
+
+        .cb {
+          span {
+            background: $color-6;
+          }
+        }
+
+      }
+
+      .cb {
+        position: relative;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+
+        border: 2px solid $color-3;
+
+        span {
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          display: block;
+          width: 24px;
+          height: 24px;
+          padding-top: 3px;
+
+          text-align: center;
+
+          .fas {
+            font-size: 16px;
+            color: $color-5;
+          }
+
+        }
+
+      }
+
+      .item-a, .item-b, .item-c, .item-d {
+        padding: 10px 0;
+
+      }
+
+      .item-a {
+        flex: 1 10%;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .item-b {
+        flex: 1 40%;
+        font-weight: 700;
+      }
+
+      .item-c {
+        flex: 1 40%;
+
+        .item-c-line {
+
+          display: block;
+
+          font-size: 12px;
+          color: $color-3;
+
+
+          & + .item-c-line {
+
+
+            padding-top: 5px;
+          }
+
+        }
+
+      }
+
+      .item-d {
+        flex: 1 10%;
+
+        text-align: right;
+
+        font-weight: 700;
+        color: $color-3;
+
+        white-space: nowrap;
+
+      }
+
+
+    }
+
+  }
+
+  h4 {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .option-list {
+
+    display: table;
+    width: 100%;
+
+    margin-bottom: 15px;
+
+    color: $color-2;
+
+    &.standart {
+
+      .option-list-item {
+
+          color: $color-3;
+      }
+    }
+
+    .option-list-item {
+
+      display: table-row;
+
+      & + .option-list-item {
+
+        .item-a, .item-b, .item-c, .item-d {
+          border-top: 1px solid $color-3;
+
+        }
+
+      }
+
+      &.selected {
+
+        .cb {
+          span {
+            background: $color-6;
+          }
+        }
+
+      }
+
+      .cb {
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+
+        border: 1px solid $color-3;
+
+        span {
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          display: block;
+          width: 18px;
+          height: 18px;
+
+          text-align: center;
+
+          .fas {
+            font-size: 14px;
+            color: $color-5;
+          }
+
+        }
+
+      }
+
+      .item-a, .item-b, .item-c {
+        display: table-cell;
+        padding: 5px 0;
+        vertical-align: middle;
+
+      }
+
+      .item-a {
+        width: 10%;
+      }
+
+      .item-b {
+        width: 80%;
+
+      }
+
+      .item-c {
+        width: 10%;
+        text-align: right;
+      }
+
+      .item-d {
+        text-align: right;
+
+        font-weight: 700;
+        color: $color-3;
+
+        white-space: nowrap;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+/* ------[ home - media queries ]------ */
+@include respond-to(w768) {
+
+
+}
+
+@include respond-to(w480) {
+
+
+}
+
+/* start - end */
