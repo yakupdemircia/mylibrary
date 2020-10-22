@@ -5,7 +5,7 @@ Uses
 - [Elasticsearch](https://elastic.co)
 - [CoreUI](https://coreui.io/) template for admin panel
 
-
+Note the project is not fully completed yet. When done, I will add some documentation for installation and usage.
 
 ## License
 
