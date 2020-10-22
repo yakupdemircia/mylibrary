@@ -18,7 +18,6 @@
                             {{ \Auth::user()->name }}</a>
                     </li>
                 @else
-                    <li><a class="open-custom-modal" data-rel="login">{{trans('favorites')}}</a></li>
                     <li><a class="open-custom-modal" data-rel="login">{{trans('login')}}</a></li>
                 @endif
             </ul>
