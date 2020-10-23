@@ -213,3 +213,25 @@ if(!function_exists('convert_search_word_by_word')){
         return $q;
     }
 }
+
+if(!function_exists('calc_issue_status')){
+    function calc_issue_status(\App\Models\Issue $issue)
+    {
+        $status = 'waiting';
+
+        if(!$issue->return_date){
+            if(strtotime(date('Y-m-d')) > strtotime($issue->end_date)){
+                $status = 'delayed';
+            }
+        }else{
+            $status = 'returned';
+
+            if(strtotime($issue->return_date) > strtotime($issue->end_date)){
+                $status = 'returned / delay';
+            }
+
+        }
+
+        return $status;
+    }
+}

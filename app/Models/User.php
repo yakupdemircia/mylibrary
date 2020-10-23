@@ -66,6 +66,11 @@ class User extends Authenticatable
         return $this->where('id', '<>', $this->id)->where('username', $username)->count() > 0;
     }
 
+    public function issues()
+    {
+        return $this->hasMany(Issue::class);
+    }
+
     public function searchUser($query,$page,$limit) : array
     {
         $query = convert_search_word_by_word($query);

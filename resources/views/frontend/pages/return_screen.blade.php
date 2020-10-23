@@ -34,21 +34,7 @@
                             @foreach($issues as $issue)
 
                                 @php
-                                $status = 'waiting';
-
-                                if(!$issue->return_date){
-                                    if(strtotime(date('Y-m-d')) > strtotime($issue->end_date)){
-                                        $status = 'delayed';
-                                    }
-                                }else{
-                                    $status = 'returned';
-
-                                    if(strtotime($issue->return_date) > strtotime($issue->end_date)){
-                                        $status = 'returned / delay';
-                                    }
-
-                                }
-
+                                $status = calc_issue_status($issue);
                                 @endphp
 
                                 <tr>
