@@ -113,6 +113,16 @@ class ProfileController extends BaseController
             ->with('fav', $fav);
     }
 
+    public function myIssues()
+    {
+        $user = Auth::user();
+
+        $issues = $user->issues()->get();
+
+        return view('frontend.pages.profile_issues_list')
+            ->with('issues', $issues);
+    }
+
     public function login()
     {
         return redirect('/');

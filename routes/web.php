@@ -53,7 +53,7 @@ Route::group(['middleware' => ['locale:en'], 'as' => 'en.frontend.', 'namespace'
         Route::get('favorites', ['uses' => 'ProfileController@myFavorites', 'as' => 'favorites']);
 
 
-        Route::get('issues', ['uses' => 'ProfileController@myFavorites', 'as' => 'issues']);
+        Route::get('issues', ['uses' => 'ProfileController@myIssues', 'as' => 'issues']);
     });
 
     Route::get('book-detail/{isbn}', ['uses' => 'Controller@bookDetail', 'as' => 'book-detail']);
