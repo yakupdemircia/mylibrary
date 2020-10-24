@@ -10,7 +10,7 @@ if (!function_exists('env_is_local')) {
 if (!function_exists('route_locale')) {
     function route_locale($name, $parameters = [], $absolute = true)
     {
-        return app('url')->route(app()->getLocale() . '.' . $name, $parameters, $absolute);
+        return app('url')->route(app()->getLocale().'.'.$name, $parameters, $absolute);
     }
 }
 
@@ -18,7 +18,7 @@ if (!function_exists('current_url')) {
 
     function current_url($url, $withLocale = true)
     {
-        if (Route::currentRouteName() == ($withLocale ? app()->getLocale() . '.' : '') . $url) {
+        if (Route::currentRouteName() == ($withLocale ? app()->getLocale().'.' : '').$url) {
             return 'active';
         } else {
             return '';
@@ -34,7 +34,7 @@ if (!function_exists('current_url_array')) {
 
         for ($i = 0; $i < count($urlArr); $i++) {
 
-            if (Route::currentRouteName() == ($withLocale ? app()->getLocale() . '.' : '') . $urlArr[$i]) {
+            if (Route::currentRouteName() == ($withLocale ? app()->getLocale().'.' : '').$urlArr[$i]) {
                 $return = 'active';
             }
         }
@@ -115,7 +115,7 @@ if (!function_exists('date_locale2')) {
 if (!function_exists('get_model_by_name')) {
     function get_model_by_name($name)
     {
-        $model = "\App\Models\\" . ucfirst($name);
+        $model = "\App\Models\\".ucfirst($name);
 
         return $model ?? null;
     }
@@ -124,7 +124,7 @@ if (!function_exists('get_model_by_name')) {
 if (!function_exists('pre')) {
     function pre($data = null)
     {
-        return '<pre>' . print_r($data) . '</pre>';
+        return '<pre>'.print_r($data).'</pre>';
     }
 }
 
@@ -184,7 +184,7 @@ if (!function_exists('filter_path_url')) {
     }
 }
 
-if(!function_exists('convert_search_word_by_word')){
+if (!function_exists('convert_search_word_by_word')) {
     function convert_search_word_by_word($text = "")
     {
         $pattern = '/[-+%\]\[{}\?_ ,.;\'!]/ui';
@@ -214,19 +214,19 @@ if(!function_exists('convert_search_word_by_word')){
     }
 }
 
-if(!function_exists('calc_issue_status')){
+if (!function_exists('calc_issue_status')) {
     function calc_issue_status(\App\Models\Issue $issue)
     {
         $status = 'waiting';
 
-        if(!$issue->return_date){
-            if(strtotime(date('Y-m-d')) > strtotime($issue->end_date)){
+        if (!$issue->return_date) {
+            if (strtotime(date('Y-m-d')) > strtotime($issue->end_date)) {
                 $status = 'delayed';
             }
-        }else{
+        } else {
             $status = 'returned';
 
-            if(strtotime($issue->return_date) > strtotime($issue->end_date)){
+            if (strtotime($issue->return_date) > strtotime($issue->end_date)) {
                 $status = 'returned / delay';
             }
 
