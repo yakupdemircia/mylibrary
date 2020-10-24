@@ -15,7 +15,7 @@
                         <a class="btn btn-lg btn-info mt-5 mb-5 float-right" href="{{route_locale('frontend.screen')}}">Go to rent screen</a>
                     </div>
                 </div>
-
+                
                 <div class="row">
                     <div class="col-md-12">
                         <table id="issues_table" class="table table-striped table-bordered">
