@@ -107,10 +107,10 @@ class ProfileController extends BaseController
     {
         $user = Auth::user();
 
-        $fav = $user->favorites();
+        $favorites = $user->favorites()->get();
 
-        return view('frontend.pages.profile_favorite_list')
-            ->with('fav', $fav);
+        return view('frontend.pages.profile_favorites_list')
+            ->with('favorites', $favorites);
     }
 
     public function myIssues()

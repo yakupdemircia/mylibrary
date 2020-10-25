@@ -71,6 +71,11 @@ class User extends Authenticatable
         return $this->hasMany(Issue::class);
     }
 
+    public function favorites()
+    {
+        return $this->hasMany(Favorite::class);
+    }
+
     public function searchUser($query,$page,$limit) : array
     {
         $query = convert_search_word_by_word($query);
