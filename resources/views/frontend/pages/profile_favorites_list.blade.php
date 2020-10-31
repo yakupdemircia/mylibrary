@@ -55,7 +55,7 @@
                                             @endforeach
                                             @else
                                                 <tr>
-                                                    <td colspan="5">You have no books rented</td>
+                                                    <td colspan="3">You have no favorites</td>
                                                 </tr>
                                             @endif
                                             </tbody>
