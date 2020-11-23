@@ -35,11 +35,11 @@
                 <div class="row-liner">
                     <input id="email" name="email" class="validate[required,custom[email]] inp inp-flat"
                            type="text" tabindex="1" autocomplete="username"
-                           placeholder="{{ trans('strings.Email') }}">
+                           placeholder="{{ trans('strings.Email') }}" value="yakup@mylibrary.com">
                     <div class="input-wr password">
                         <input id="password" name="password" class="validate[required] inp inp-flat" type="password"
                                tabindex="2" autocomplete="password"
-                               placeholder="{{ trans('strings.Password') }}">
+                               placeholder="{{ trans('strings.Password') }}" value="123">
                         <i class="fa fa-eye show-password"></i>
                     </div>
                 </div>

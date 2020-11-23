@@ -30,6 +30,8 @@ class CreateUsersTable extends Migration
             $table->unsignedTinyInteger('status')->default(0);
             $table->unsignedTinyInteger('gender')->default(0);
             $table->unsignedInteger('card_id')->default('0');
+            $table->enum('role', ['member', 'operator'])->default('member');
+
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

@@ -47,6 +47,9 @@ class User extends Authenticatable
         'gender',
     ];
 
+    protected $guarded = [
+        'role'
+    ];
 
     protected $hidden = [
         'password',

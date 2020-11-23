@@ -10,6 +10,7 @@
             <ul class="menu">
 
                 @if(\Auth::check())
+                    <li><a href="{{route_locale('frontend.screen')}}" >{{trans('screen')}}</a></li>
                     <li><a href="{{route_locale('frontend.profile.favorites')}}">{{trans('favorites')}}</a></li>
 
                     <li>

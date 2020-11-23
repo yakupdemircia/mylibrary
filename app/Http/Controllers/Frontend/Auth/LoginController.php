@@ -48,7 +48,7 @@ class LoginController extends Controller
         return $this->authenticated($request, $this->guard()->user())
             ?: response()->json([
                 'result'  => 'success',
-                'message' => 'Giriş başarılı.<br>Ana sayfaya yönlendiriliyorsun.',
+                'message' => 'Login success.<br>Forwarding to home.',
             ]);
     }
 
