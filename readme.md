@@ -5,6 +5,13 @@ Uses
 - [Elasticsearch](https://elastic.co)
 - [CoreUI](https://coreui.io/) template for admin panel
 
+
+[Demo](https://library.yakupdemirci.com) https://library.yakupdemirci.com
+
+[Panel Demo](https://library.yakupdemirci.com/panel) https://library.yakupdemirci.com/panel
+
+
+
 Note the project is not fully completed yet. When done, I will add some documentation for installation and usage.
 
 ## License
